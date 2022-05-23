@@ -1,0 +1,89 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.filter {
+   max-width: 318px;
+}
+
+.filter__inputs {
+   display: flex;
+}
+
+.filter__label {
+   display: flex;
+   align-items: center;
+
+   width: 133px;
+   height: 40px;
+
+   border: thin solid #D9D9D9;
+   border-radius: 4px;
+   padding: 0 10px;
+   font-size: 14px;
+}
+
+.filter__label:first-child {
+   margin-right: 10px;
+}
+
+.filter__text {
+   margin-right: 10px;
+
+   font-size: 14px;
+   color: #808080;
+}
+
+.filter__input {
+   margin-right: 5px;
+   border: none;   
+}
+
+.filter__input:focus {
+   outline: none;
+}
+
+ 
+
+.noUi-connect {
+   background-color: #571fdd;
+}
+
+.noUi-target {
+   background-color: #bfbfbf;
+   border: none;
+   border-radius: 100px;
+   box-shadow: none;
+   height: 2px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+   display: none;
+}
+
+.noUi-handle {
+   box-shadow: none;
+   width: 22px;
+   height: 22px;
+   border-radius: 100%;
+   background-color: #fff;
+   border: 2px solid #571fdd;
+}
+
+.noUi-horizontal .noUi-handle {
+   width: 22px;
+   height: 22px;
+   cursor: pointer;
+
+   top: -10px;
+}

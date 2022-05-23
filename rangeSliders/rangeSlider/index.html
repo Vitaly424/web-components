@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- Библиотека range slider css -->
+   <link rel="stylesheet" href="./libsRangeSlider.min.css">
+   <link rel="stylesheet" href="./main.css">
+   <title>Заготовка</title>
+</head>  
+<body>
+   
+   <div class="filter">
+      <h2 class="filter__title">Цена</h2>
+      <div class="filter__slider" id="range-slider"></div>
+      <div class="filter__inputs">
+         <label class="filter__label">
+            <span class="filter__text">от</span>
+            <input class="filter__input" type="number" min="500" max="999999" placeholder="500" id = "input-0">
+            <span class="filter__text">Р</span>
+         </label>
+         <label class="filter__label">
+            <span class="filter__text">от</span>
+            <input class="filter__input" type="number" min="500" max="999999" placeholder="999999" id = "input-1">
+            <span class="filter__text">Р</span>
+         </label>
+      </div>
+   </div>
+
+
+   <!-- Библиотека range slider js -->
+   <script src="./libsRangeSlider.min.js"></script>
+
+   <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.filter-price {
+   max-width: 318px;
+}
+
+.filter-price__inputs {
+   margin-bottom: 25px;
+   display: flex;  
+   justify-content: space-between;
+}
+
+.filter-price__label {
+   position: relative;
+   display: flex;
+   align-items: center;
+
+   width: 80px;
+   height: 34px;
+
+   border: thin solid #000000;
+   border-radius: 4px;
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 0;
+   padding-bottom: 0;
+   font-size: 14px;
+
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+.filter-price__label:first-child {
+   margin-right: 10px;
+}
+
+.filter-price__text {
+   display: none;
+
+   font-size: 14px;
+   color: #000000;
+
+   background-color: #fff;
+}
+
+.filter-price__text.m-active {
+   display: block;
+
+   position: absolute;
+   left: 8px;
+}
+
+.filter-price__input {
+   width: 60px;
+   border: none;   
+}
+
+.filter-price__input:focus {
+   outline: none;
+}
+ 
+
+.noUi-connect {
+   background-color: #DA1884;
+}
+
+.noUi-connects {
+   background-color: #DDDDDD;
+}
+
+.noUi-target {
+   background-color: #bfbfbf;
+   border: none;
+   border-radius: 100px;
+   box-shadow: none;
+   height: 2px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+   display: none;
+}
+
+.noUi-handle {
+   border: none;
+}
+
+.noUi-handle {
+   box-shadow: none;
+   width: 22px;
+   height: 22px;
+   border-radius: 100%;
+   background-color: #fff;
+   background: #DA1884;
+}
+
+.noUi-horizontal .noUi-handle {
+   width: 22px;
+   height: 22px;
+   cursor: pointer;
+
+   top: -10px;
+}

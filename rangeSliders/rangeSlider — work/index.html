@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- Библиотека range slider css -->
+   <link rel="stylesheet" href="./libsRangeSlider.min.css">
+   <link rel="stylesheet" href="./main.css">
+   <title>Заготовка</title>
+</head>  
+<body>
+   
+   <div class="filter-price">
+      <h2 class="filter-price__title">Цена</h2>
+      <div class="filter-price__inputs">
+         <label class="filter-price__label">
+            <input class="filter-price__input" type="number" min="500" max="999999" id = "input-0">
+            <span class="filter-price__text m-active" id = "span-0">6 500 ₽</span>
+         </label>   
+         <label class="filter-price__label">
+            <input class="filter-price__input" type="number" min="500" max="999999" id = "input-1">
+            <span class="filter-price__text m-active" id = "span-1">22 000 ₽</span>
+         </label>
+      </div>
+      <div class="filter-price__slider" id="range-slider"></div>
+   </div>
+
+   <span class="formatter">123456</span>
+
+   <!-- Библиотека range slider js -->
+   <script src="./libsRangeSlider.min.js"></script>
+   <script src="./formatter.js"></script>
+   
+   <script>
+      const rangeSlider = document.querySelector('#range-slider');
+      const filterText = document.getElementsByClassName('filter__text');
+
+      noUiSlider.create(rangeSlider, {
+         start: [0, 30000],
+         connect: true,
+         step: 1,
+         range: {
+               'min': [0],
+               'max': [30000]
+         } 
+      });
+
+      const input0 = document.getElementById('input-0');
+      const input1 = document.getElementById('input-1');
+
+      const span0 = document.getElementById('span-0');
+      const span1 = document.getElementById('span-1');
+
+      const inputs = [input0, input1];
+      const spanAll = [span0, span1]
+
+      rangeSlider.noUiSlider.on('update', function(values, handle) {
+         inputs[handle].value = parseInt(accounting.formatNumber(values[handle], 0, " "));
+         spanAll[handle].textContent = accounting.formatNumber(values[handle], 0, " ") + " ₽";
+      });
+      // accounting.formatNumber(formaterNumber, 0, " ");
+      inputs.forEach(item => {
+         item.addEventListener('focus', (e) => {
+            e.target.nextElementSibling.classList.remove('m-active');
+         })
+      }) 
+
+      inputs.forEach(item => {
+         item.addEventListener('focusout', (e) => {
+            e.target.nextElementSibling.classList.add('m-active');
+         })
+      })
+
+      const setRangeSlider = (i, value) => {
+         let arr = [null, null];
+         arr[i] = value;
+         rangeSlider.noUiSlider.set(arr);
+      }
+
+      inputs.forEach((el, index) => {
+         el.addEventListener('change', (e) => {
+            setRangeSlider(index, e.currentTarget.value);
+         });
+      });
+
+      const formater = document.querySelector('.formatter');
+      const formaterNumber = parseInt(formater.textContent);
+
+
+      formater.textContent = accounting.formatNumber(formaterNumber, 0, " ");
+
+
+   </script>
+</body>
+</html>

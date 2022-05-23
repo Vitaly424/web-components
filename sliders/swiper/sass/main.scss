@@ -1,0 +1,13 @@
+// libs 
+@import "./base/libs/swiper.bundle.min.scss";
+
+// Base
+@import "./base/vars";
+@import "./base/reset";
+@import "./base/base";
+
+// Blocks
+@import "./blocks/header";
+@import "./blocks/logo";
+@import "./blocks/slider-product";
+@import "./blocks/footer";

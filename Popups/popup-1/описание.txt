@@ -1,0 +1,3 @@
+Библиотека написанная на чистом js для модальных окон. 
+
+ссылка на библиотеку - https://addmorescripts.github.io/hystModal/index_ru.html
